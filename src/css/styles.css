@@ -26,4 +26,20 @@
 .swiper {
   width: 200px;
   height: 200px;
+  overflow: visible;
+}
+.swiper-wrapper {
+  display: flex;
+  gap: 50px;
+  transform: translate3d(-300px, 0px, 0px);
+}
+.swiper-slide {
+}
+
+.swiper-pagination-bullet {
+  background-color: red;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: green;
 }
