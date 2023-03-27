@@ -4,42 +4,88 @@
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
 @import url('./header.css');
+@import url('./hero.css');
+@import url('./advantages.css');
+@import url('./unique-components.css');
+@import url('./how-its-made.css');
+@import url('./our-products.css');
+@import url('./top-sellers.css');
+@import url('./reviews.css');
+@import url('./subscribe.css');
+@import url('./footer.css');
+@import url('./modal-review.css');
+@import url('./modal-buy-now.css');
+@import url('./modal-thank-you.css');
+@import url('./modal-feedback.css');
+@import url('./modal-explore.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --container-width: 100%;
+  --main-background-color: #fafafa;
+  --cards-background-color: #1e1823;
+  --text-color-blond: #ffffff;
+  --text-color-blond-advantages: rgba(255, 255, 255, 0.7);
+  --text-color-our-products-reviews: rgba(17, 17, 17, 0.7);
+  --text-color-accent: #fd9222;
+  --input-placeholder-text-color: rgba(64, 64, 64, 0.3);
+  --modal-title-color: #111111;
+  --modal-border-box-color: rgba(17, 17, 17, 0.05);
+  --modal-tel-prefix: #000000;
+  --modal-active-btn: #fcf1e0;
+  --accent-color: #fd9222;
 }
 
-.swiper {
-  width: 200px;
-  height: 200px;
-  overflow: visible;
-}
-.swiper-wrapper {
-  display: flex;
-  gap: 50px;
-  transform: translate3d(-300px, 0px, 0px);
-}
-.swiper-slide {
+.container {
+  width: var(--container-width);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
-.swiper-pagination-bullet {
-  background-color: red;
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #111111;
+  background-color: var(--main-background-color);
 }
 
-.swiper-pagination-bullet-active {
-  background-color: green;
+@media (min-width: 375px) {
+  :root {
+    --container-width: 375px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --container-width: 768px;
+    }
+    .container {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --container-width: 1200px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
